@@ -5,13 +5,12 @@ function Footer() {
     <footer
       style={{
         backgroundColor: "#4c4d4c",
-        color: "#fff",
         padding: "1.5rem 2rem",
         textAlign: "center",
         fontSize: "18px",
         fontWeight: "bold",
         letterSpacing: "1px",
-        boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0 -4px 10px rgba(52, 152, 219, 0.6)",
         position: "relative",
         width: "100%",
       }}
@@ -27,20 +26,28 @@ function Footer() {
       >
         Connect with Me
       </p>
+
       <p style={{ marginTop: "0.5rem" }}>
         <a
           href="https://github.com/mwibert"
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: "#ffcc00",
+            color: "#fff",
             textDecoration: "none",
             fontWeight: "bold",
             fontSize: "18px",
             marginRight: "15px",
+            transition: "color 0.3s ease, text-shadow 0.3s ease",
           }}
-          onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
-          onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+          onMouseOver={(e) => {
+            e.target.style.color = "#3498db";
+            e.target.style.textShadow = "0px 2px 5px rgba(52, 152, 219, 0.6)";
+          }}
+          onMouseOut={(e) => {
+            e.target.style.color = "#fff";
+            e.target.style.textShadow = "none";
+          }}
         >
           GitHub
         </a>
@@ -50,14 +57,21 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: "#ffcc00",
+            color: "#fff",
             textDecoration: "none",
             fontWeight: "bold",
             fontSize: "18px",
             marginLeft: "15px",
+            transition: "color 0.3s ease, text-shadow 0.3s ease",
           }}
-          onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
-          onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+          onMouseOver={(e) => {
+            e.target.style.color = "#3498db";
+            e.target.style.textShadow = "0px 2px 5px rgba(52, 152, 219, 0.6)";
+          }}
+          onMouseOut={(e) => {
+            e.target.style.color = "#fff";
+            e.target.style.textShadow = "none";
+          }}
         >
           LinkedIn
         </a>
