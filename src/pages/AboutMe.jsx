@@ -8,7 +8,13 @@ function AboutMe() {
       <img
         src="/mwibert.jpg"
         alt="developer avatar"
-        style={{ borderRadius: "50%", marginBottom: "1rem" }}
+        style={{
+          width: "150px", // Set a fixed width (adjust as needed)
+          height: "150px", // Maintain the aspect ratio
+          borderRadius: "50%",
+          marginBottom: "1rem",
+          objectFit: "cover", // Ensures proper cropping if needed
+        }}
       />
       <p>
         Hello! I'm Mike Wibert, a full stack web developer specializing in
