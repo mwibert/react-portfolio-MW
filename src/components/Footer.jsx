@@ -24,7 +24,7 @@ function Footer() {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
         }}
       >
-        Connect with Me
+        Check me out
       </p>
 
       <p style={{ marginTop: "0.5rem" }}>

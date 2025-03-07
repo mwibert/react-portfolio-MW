@@ -23,7 +23,7 @@ function AboutMe() {
       <h2
         style={{
           fontSize: "32px",
-          color: "#fff", // ✅ Text is now white
+          color: "#fff",
           marginBottom: "20px",
           fontWeight: "bold",
           textTransform: "uppercase",
@@ -33,7 +33,7 @@ function AboutMe() {
           borderRadius: "5px",
         }}
       >
-        About Me
+        About this Dev
       </h2>
 
       <img
@@ -59,12 +59,12 @@ function AboutMe() {
           maxWidth: "700px",
           lineHeight: "1.8",
           padding: "15px",
-          backgroundColor: "rgba(0, 0, 0, 0.6)", // ✅ Darker background for better contrast
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
           borderRadius: "5px",
-          color: "#fff", // ✅ Text is now white
+          color: "#fff",
         }}
       >
-        Hello! I'm <strong style={{ color: "#ffcc00" }}>Mike Wibert</strong>, a
+        Hello! I'm <strong style={{ color: "#ffcc00" }}>Mike</strong>, a
         passionate{" "}
         <strong style={{ color: "#ffcc00" }}>Full Stack Web Developer</strong>{" "}
         specializing in{" "}

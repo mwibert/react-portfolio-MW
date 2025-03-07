@@ -8,58 +8,39 @@ function Navigation() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        gap: "20px",
-        padding: "10px 0",
-        fontSize: "18px",
+        gap: "clamp(10px, 3vw, 20px)",
+        fontSize: "clamp(14px, 2vw, 18px)",
         fontWeight: "bold",
         textTransform: "uppercase",
         letterSpacing: "1px",
+        flexWrap: "wrap",
       }}
     >
-      <NavLink
-        to="/"
-        style={({ isActive }) => ({
-          color: isActive ? "#3498db" : "#fff", // ✅ Blue color for active link
-          textDecoration: "none",
-          padding: "10px 15px",
-          borderRadius: "5px",
-          transition: "background 0.3s ease, transform 0.2s ease",
-          backgroundColor: isActive ? "rgba(52, 152, 219, 0.2)" : "transparent", // ✅ Blue background for active link
-          boxShadow: isActive ? "0px 2px 5px rgba(52, 152, 219, 0.6)" : "none", // ✅ Blue shadow effect for active link
-        })}
-      >
-        About Me
-      </NavLink>
+      {["About Me", "Portfolio", "Contact"].map((item, index) => {
+        const path = `/${item.toLowerCase().replace(" ", "")}`;
 
-      <NavLink
-        to="/portfolio"
-        style={({ isActive }) => ({
-          color: isActive ? "#3498db" : "#fff",
-          textDecoration: "none",
-          padding: "10px 15px",
-          borderRadius: "5px",
-          transition: "background 0.3s ease, transform 0.2s ease",
-          backgroundColor: isActive ? "rgba(52, 152, 219, 0.2)" : "transparent",
-          boxShadow: isActive ? "0px 2px 5px rgba(52, 152, 219, 0.6)" : "none",
-        })}
-      >
-        Portfolio
-      </NavLink>
-
-      <NavLink
-        to="/contact"
-        style={({ isActive }) => ({
-          color: isActive ? "#3498db" : "#fff",
-          textDecoration: "none",
-          padding: "10px 15px",
-          borderRadius: "5px",
-          transition: "background 0.3s ease, transform 0.2s ease",
-          backgroundColor: isActive ? "rgba(52, 152, 219, 0.2)" : "transparent",
-          boxShadow: isActive ? "0px 2px 5px rgba(52, 152, 219, 0.6)" : "none",
-        })}
-      >
-        Contact
-      </NavLink>
+        return (
+          <NavLink
+            key={index}
+            to={path}
+            style={({ isActive }) => ({
+              color: isActive ? "#3498db" : "#fff",
+              textDecoration: "none",
+              padding: "clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 15px)",
+              borderRadius: "5px",
+              transition: "background 0.3s ease, transform 0.2s ease",
+              backgroundColor: isActive
+                ? "rgba(52, 152, 219, 0.2)"
+                : "transparent",
+              boxShadow: isActive
+                ? "0px 2px 5px rgba(52, 152, 219, 0.6)"
+                : "none",
+            })}
+          >
+            {item}
+          </NavLink>
+        );
+      })}
     </nav>
   );
 }
