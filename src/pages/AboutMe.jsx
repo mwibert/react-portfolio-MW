@@ -53,29 +53,40 @@ function AboutMe() {
         onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
       />
 
-      <p
+      <div
         style={{
-          fontSize: "20px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           maxWidth: "700px",
-          lineHeight: "1.8",
-          padding: "15px",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
-          borderRadius: "5px",
-          color: "#fff",
         }}
       >
-        Hello! I'm <strong style={{ color: "#4aa3df" }}>Mike</strong>, a
-        passionate{" "}
-        <strong style={{ color: "#4aa3df" }}>Full Stack Web Developer</strong>{" "}
-        specializing in{" "}
-        <strong style={{ color: "#4aa3df" }}>JavaScript, TypeScript</strong>,
-        and modern web frameworks such as{" "}
-        <strong style={{ color: "#4aa3df" }}>
-          React.js, Express.js, Node.js, Apollo GraphQL, and JWT authentication
-        </strong>
-        . I love crafting high-performing, user-friendly applications that{" "}
-        <strong style={{ color: "#4aa3df" }}>make a real-world impact</strong>.
-      </p>
+        <p
+          style={{
+            fontSize: "20px",
+            lineHeight: "1.8",
+            padding: "15px",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            borderRadius: "5px",
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          Hello! I'm <strong style={{ color: "#4aa3df" }}>Mike</strong>, a
+          passionate{" "}
+          <strong style={{ color: "#4aa3df" }}>Full Stack Web Developer</strong>{" "}
+          specializing in{" "}
+          <strong style={{ color: "#4aa3df" }}>JavaScript, TypeScript</strong>,
+          and modern web frameworks such as{" "}
+          <strong style={{ color: "#4aa3df" }}>
+            React.js, Express.js, Node.js, Apollo GraphQL, and JWT
+            authentication
+          </strong>
+          . I love crafting high-performing, user-friendly applications that{" "}
+          <strong style={{ color: "#4aa3df" }}>make a real-world impact</strong>
+          .
+        </p>
+      </div>
     </section>
   );
 }
