@@ -5,10 +5,10 @@ function Header() {
   return (
     <header
       style={{
-        backgroundColor: "#4c4d4c", // Dark background
-        color: "#fff", // White text
-        padding: "1rem 2rem", // More padding for better spacing
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+        backgroundColor: "#4c4d4c",
+        color: "#fff",
+        padding: "1.5rem 2rem",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
       }}
     >
       <div
@@ -16,16 +16,18 @@ function Header() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          maxWidth: "1200px", // Keeps the header from stretching too wide
-          margin: "0 auto", // Centers the header
+          maxWidth: "1200px",
+          margin: "0 auto",
         }}
       >
         <h1
           style={{
-            fontSize: "24px",
+            fontSize: "30px",
+            fontWeight: "900",
             margin: "0",
-            fontWeight: "bold",
-            letterSpacing: "1px",
+            letterSpacing: "1.5px",
+            textTransform: "uppercase",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
           }}
         >
           Michael Wibert
