@@ -4,7 +4,12 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
-    host: "0.0.0.0",
+    host: "0.0.0.0", // Ensure it binds to all network interfaces
+    port: 3000, // Default Vite port
+    strictPort: true, // Prevents Vite from switching to a different port if 3000 is taken
+    allowedHosts: ["react-portfolio-mw.onrender.com"], // Add your Render domain here
+  },
+  preview: {
+    port: 8080, // Adjust if needed for preview mode
   },
 });
