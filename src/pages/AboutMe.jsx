@@ -64,17 +64,17 @@ function AboutMe() {
           color: "#fff",
         }}
       >
-        Hello! I'm <strong style={{ color: "#ffcc00" }}>Mike</strong>, a
+        Hello! I'm <strong style={{ color: "#4aa3df" }}>Mike</strong>, a
         passionate{" "}
-        <strong style={{ color: "#ffcc00" }}>Full Stack Web Developer</strong>{" "}
+        <strong style={{ color: "#4aa3df" }}>Full Stack Web Developer</strong>{" "}
         specializing in{" "}
-        <strong style={{ color: "#ffcc00" }}>JavaScript, TypeScript</strong>,
+        <strong style={{ color: "#4aa3df" }}>JavaScript, TypeScript</strong>,
         and modern web frameworks such as{" "}
-        <strong style={{ color: "#ffcc00" }}>
+        <strong style={{ color: "#4aa3df" }}>
           React.js, Express.js, Node.js, Apollo GraphQL, and JWT authentication
         </strong>
         . I love crafting high-performing, user-friendly applications that{" "}
-        <strong style={{ color: "#ffcc00" }}>make a real-world impact</strong>.
+        <strong style={{ color: "#4aa3df" }}>make a real-world impact</strong>.
       </p>
     </section>
   );

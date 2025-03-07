@@ -13,6 +13,9 @@ function Footer() {
         boxShadow: "0 -4px 10px rgba(52, 152, 219, 0.6)",
         position: "relative",
         width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <p
@@ -27,7 +30,14 @@ function Footer() {
         Check me out
       </p>
 
-      <p style={{ marginTop: "0.5rem" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "15px",
+          marginTop: "0.5rem",
+        }}
+      >
         <a
           href="https://github.com/mwibert"
           target="_blank"
@@ -37,7 +47,6 @@ function Footer() {
             textDecoration: "none",
             fontWeight: "bold",
             fontSize: "18px",
-            marginRight: "15px",
             transition: "color 0.3s ease, text-shadow 0.3s ease",
           }}
           onMouseOver={(e) => {
@@ -51,7 +60,7 @@ function Footer() {
         >
           GitHub
         </a>
-        |
+        <span style={{ color: "#fff" }}>|</span>
         <a
           href="https://www.linkedin.com/in/michael-wibert-61709029b/"
           target="_blank"
@@ -61,7 +70,6 @@ function Footer() {
             textDecoration: "none",
             fontWeight: "bold",
             fontSize: "18px",
-            marginLeft: "15px",
             transition: "color 0.3s ease, text-shadow 0.3s ease",
           }}
           onMouseOver={(e) => {
@@ -75,7 +83,7 @@ function Footer() {
         >
           LinkedIn
         </a>
-      </p>
+      </div>
     </footer>
   );
 }
