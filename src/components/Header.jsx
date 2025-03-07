@@ -8,7 +8,9 @@ function Header() {
         backgroundColor: "#4c4d4c",
         color: "#fff",
         padding: "1.5rem 2rem",
-        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0 4px 10px rgba(52, 152, 219, 0.6)", // ✅ Matches footer
+        width: "100vw", // ✅ Ensures full width
+        boxSizing: "border-box", // ✅ Prevents overflow
       }}
     >
       <div
