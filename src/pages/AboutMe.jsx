@@ -8,15 +8,31 @@ function AboutMe() {
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        padding: "50px",
-        maxWidth: "800px",
-        margin: "0 auto",
-        backgroundColor: "#f9f9f9",
-        borderRadius: "10px",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        padding: "60px",
+        maxWidth: "900px",
+        margin: "50px auto",
+        backgroundImage: "url('/aboutme-background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "15px",
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
+        backdropFilter: "blur(5px)",
       }}
     >
-      <h2 style={{ fontSize: "28px", color: "#333", marginBottom: "20px" }}>
+      <h2
+        style={{
+          fontSize: "32px",
+          color: "#fff", // ✅ Text is now white
+          marginBottom: "20px",
+          fontWeight: "bold",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          padding: "10px 20px",
+          borderRadius: "5px",
+        }}
+      >
         About Me
       </h2>
 
@@ -24,31 +40,41 @@ function AboutMe() {
         src="/mwibert.jpg"
         alt="developer avatar"
         style={{
-          width: "150px",
-          height: "150px",
+          width: "220px",
+          height: "220px",
           borderRadius: "50%",
-          marginBottom: "1rem",
+          marginBottom: "1.5rem",
           objectFit: "cover",
-          border: "3px solid #4c4d4c",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
+          border: "4px solid #fff",
+          boxShadow: "0 8px 12px rgba(0, 0, 0, 0.3)",
+          transition: "transform 0.3s ease-in-out",
         }}
+        onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+        onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
       />
 
       <p
         style={{
-          fontSize: "18px",
-          color: "#555",
-          maxWidth: "600px",
-          lineHeight: "1.6",
-          padding: "0 20px",
+          fontSize: "20px",
+          maxWidth: "700px",
+          lineHeight: "1.8",
+          padding: "15px",
+          backgroundColor: "rgba(0, 0, 0, 0.6)", // ✅ Darker background for better contrast
+          borderRadius: "5px",
+          color: "#fff", // ✅ Text is now white
         }}
       >
-        Hello! I'm <strong>Mike Wibert</strong>, a passionate full stack web
-        developer specializing in <strong>JavaScript, TypeScript</strong>, and
-        several modern frameworks and libraries, including{" "}
-        <strong>React.js, Express.js, Node.js, Apollo GraphQL, and JWT</strong>.
-        I love building high-performing, user-friendly applications that make a
-        real-world impact.
+        Hello! I'm <strong style={{ color: "#ffcc00" }}>Mike Wibert</strong>, a
+        passionate{" "}
+        <strong style={{ color: "#ffcc00" }}>Full Stack Web Developer</strong>{" "}
+        specializing in{" "}
+        <strong style={{ color: "#ffcc00" }}>JavaScript, TypeScript</strong>,
+        and modern web frameworks such as{" "}
+        <strong style={{ color: "#ffcc00" }}>
+          React.js, Express.js, Node.js, Apollo GraphQL, and JWT authentication
+        </strong>
+        . I love crafting high-performing, user-friendly applications that{" "}
+        <strong style={{ color: "#ffcc00" }}>make a real-world impact</strong>.
       </p>
     </section>
   );

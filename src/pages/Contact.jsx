@@ -59,14 +59,31 @@ function Contact() {
       style={{
         padding: "50px",
         textAlign: "center",
-        backgroundColor: "#f9f9f9",
+        backgroundImage: "url('/contact-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         borderRadius: "10px",
-        maxWidth: "500px",
-        margin: "0 auto",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        maxWidth: "600px",
+        margin: "50px auto",
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+        backdropFilter: "blur(5px)",
+        color: "#fff",
       }}
     >
-      <h2 style={{ fontSize: "28px", color: "#333", marginBottom: "20px" }}>
+      <h2
+        style={{
+          fontSize: "28px",
+          color: "#fff",
+          marginBottom: "20px",
+          fontWeight: "bold",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          padding: "10px 20px",
+          borderRadius: "5px",
+        }}
+      >
         Contact Me
       </h2>
 
@@ -77,12 +94,12 @@ function Contact() {
           margin: "0 auto",
           padding: "20px",
           borderRadius: "8px",
-          backgroundColor: "#fff",
-          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.3)",
         }}
       >
         <div style={{ marginBottom: "1rem", textAlign: "left" }}>
-          <label htmlFor="name" style={{ fontWeight: "bold" }}>
+          <label htmlFor="name" style={{ fontWeight: "bold", color: "#fff" }}>
             Name*
           </label>
           <input
@@ -100,14 +117,14 @@ function Contact() {
             onBlur={handleBlur}
           />
           {errors.name && (
-            <span style={{ color: "red", fontSize: "14px" }}>
+            <span style={{ color: "#ffcc00", fontSize: "14px" }}>
               {errors.name}
             </span>
           )}
         </div>
 
         <div style={{ marginBottom: "1rem", textAlign: "left" }}>
-          <label htmlFor="email" style={{ fontWeight: "bold" }}>
+          <label htmlFor="email" style={{ fontWeight: "bold", color: "#fff" }}>
             Email*
           </label>
           <input
@@ -125,14 +142,17 @@ function Contact() {
             onBlur={handleBlur}
           />
           {errors.email && (
-            <span style={{ color: "red", fontSize: "14px" }}>
+            <span style={{ color: "#ffcc00", fontSize: "14px" }}>
               {errors.email}
             </span>
           )}
         </div>
 
         <div style={{ marginBottom: "1rem", textAlign: "left" }}>
-          <label htmlFor="message" style={{ fontWeight: "bold" }}>
+          <label
+            htmlFor="message"
+            style={{ fontWeight: "bold", color: "#fff" }}
+          >
             Message*
           </label>
           <textarea
@@ -151,7 +171,7 @@ function Contact() {
             onBlur={handleBlur}
           />
           {errors.message && (
-            <span style={{ color: "red", fontSize: "14px" }}>
+            <span style={{ color: "#ffcc00", fontSize: "14px" }}>
               {errors.message}
             </span>
           )}
@@ -160,8 +180,8 @@ function Contact() {
         <button
           type="submit"
           style={{
-            backgroundColor: "#4c4d4c",
-            color: "white",
+            backgroundColor: "#ffcc00",
+            color: "#000",
             padding: "10px 20px",
             border: "none",
             borderRadius: "5px",
@@ -169,7 +189,10 @@ function Contact() {
             fontSize: "16px",
             fontWeight: "bold",
             width: "100%",
+            transition: "background-color 0.3s ease",
           }}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#e6b800")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#ffcc00")}
         >
           Send
         </button>

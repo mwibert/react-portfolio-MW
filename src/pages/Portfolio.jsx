@@ -20,16 +20,32 @@ function Portfolio() {
   return (
     <section
       style={{
-        padding: "50px",
+        padding: "60px",
         textAlign: "center",
-        backgroundColor: "#f9f9f9",
-        borderRadius: "10px",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        backgroundImage: "url('/portfolio-background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "15px",
+        maxWidth: "1300px",
+        margin: "50px auto",
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
+        backdropFilter: "blur(5px)",
       }}
     >
-      <h2 style={{ fontSize: "28px", color: "#333", marginBottom: "20px" }}>
+      <h2
+        style={{
+          fontSize: "32px",
+          color: "#fff",
+          marginBottom: "20px",
+          fontWeight: "bold",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          padding: "10px 20px",
+          borderRadius: "5px",
+        }}
+      >
         Portfolio
       </h2>
 
@@ -47,19 +63,20 @@ function Portfolio() {
           <div
             key={index}
             style={{
-              backgroundColor: "#fff",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
               padding: "20px",
               borderRadius: "10px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
               textAlign: "left",
               transition: "transform 0.3s ease-in-out",
+              color: "#fff",
             }}
             onMouseOver={(e) =>
               (e.currentTarget.style.transform = "scale(1.05)")
             }
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
-            <h3 style={{ fontSize: "22px", color: "#4c4d4c" }}>{proj.title}</h3>
+            <h3 style={{ fontSize: "22px", color: "#ffcc00" }}>{proj.title}</h3>
             <img
               src={proj.image}
               alt={proj.title}
@@ -71,7 +88,7 @@ function Portfolio() {
                 marginBottom: "10px",
               }}
             />
-            <p style={{ fontSize: "16px", color: "#555" }}>{proj.text}</p>
+            <p style={{ fontSize: "16px", color: "#ddd" }}>{proj.text}</p>
             <div style={{ marginTop: "10px" }}>
               {proj.deployedLink && (
                 <a

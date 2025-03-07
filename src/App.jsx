@@ -11,16 +11,28 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-      <Header />
-      <div style={{ padding: "1rem" }}>
-        <Routes>
-          <Route path="/" element={<AboutMe />} />
-
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <div
+        style={{
+          backgroundImage: "url('/background.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Header />
+        <div style={{ padding: "2rem", flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<AboutMe />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
