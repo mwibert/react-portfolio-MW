@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -24,13 +29,14 @@ function App() {
         }}
       >
         <Header />
-        <div style={{ padding: "2rem", flex: 1 }}>
+        <main style={{ padding: "2rem", flex: 1 }}>
           <Routes>
-            <Route path="/" element={<AboutMe />} />
+            <Route path="/" element={<Navigate to="/about" />} />
+            <Route path="/about" element={<AboutMe />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
