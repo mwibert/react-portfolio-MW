@@ -6,7 +6,7 @@ function AboutMe() {
       <h2>About Me</h2>
 
       <img
-        src="https://via.placeholder.com/150"
+        src="/mwibert.jpg"
         alt="developer avatar"
         style={{ borderRadius: "50%", marginBottom: "1rem" }}
       />
