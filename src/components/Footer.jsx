@@ -12,8 +12,8 @@ function Footer() {
         letterSpacing: "1px",
         boxShadow: "0 -4px 10px rgba(52, 152, 219, 0.6)",
         position: "relative",
-        width: "100vw", // ✅ Fix for right margin issue
-        boxSizing: "border-box", // ✅ Ensures padding doesn't cause overflow
+        width: "100vw",
+        boxSizing: "border-box",
         left: "0",
         right: "0",
         display: "flex",
