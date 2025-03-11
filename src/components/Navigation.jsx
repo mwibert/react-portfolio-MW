@@ -20,6 +20,7 @@ function Navigation() {
         { label: "About Me", path: "/about" },
         { label: "Portfolio", path: "/portfolio" },
         { label: "Contact", path: "/contact" },
+        { label: "Resume", path: "/resume" },
       ].map((item, index) => (
         <NavLink
           key={index}
