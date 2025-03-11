@@ -32,7 +32,7 @@ function Contact() {
     setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const nameError = validateField("name", formData.name);
@@ -48,7 +48,13 @@ function Contact() {
       return;
     }
 
-    alert("Form submitted successfully!");
+    const mailtoLink = `mailto:michaelwibert@gmail.com?subject=Message from ${encodeURIComponent(
+      formData.name
+    )}&body=${encodeURIComponent(
+      formData.message
+    )}%0D%0A%0D%0AFrom: ${encodeURIComponent(formData.email)}`;
+
+    window.location.href = mailtoLink;
 
     setFormData({ name: "", email: "", message: "" });
     setErrors({ name: "", email: "", message: "" });
@@ -191,8 +197,6 @@ function Contact() {
             width: "100%",
             transition: "background-color 0.3s ease",
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#e6b800")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#ffcc00")}
         >
           Send
         </button>
